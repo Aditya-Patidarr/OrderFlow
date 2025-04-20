@@ -1,24 +1,24 @@
-# 🍽️ Restaurant Database Project using MySQL & Stored Procedures
+# 🍽️ **OrderFlow: Restaurant Database Management System using MySQL & Stored Procedures**
 
-This project showcases a mini relational database system for a restaurant, built with **MySQL**. It includes tables for customers, bookings, courses, and delivery addresses. Key SQL concepts are demonstrated, including **joins**, **views**, **grouping**, **subqueries**, **altering table structure**, and **stored procedures**.
-
----
-
-## 📌 Project Highlights
-
-- ✅ Relational schema using `Customers`, `Bookings`, `Courses`, and `DeliveryAddress` tables.
-- 📅 Booking system with date-wise filtering and customer associations.
-- 🔁 Stored Procedure: `GetBookingsData` to fetch bookings by date.
-- 🧾 Virtual Table (View): `BookingsView` for filtering key booking data.
-- 🔄 Dynamic updates and conditional operations like `UPDATE`, `ALTER`, and subqueries.
-- 📋 Demonstrates advanced SQL features: constraints, views, string functions, and more.
+OrderFlow is a relational database system designed for managing restaurant bookings, customer information, and courses. Built with **MySQL**, it integrates essential SQL features such as **stored procedures**, **views**, **joins**, and **subqueries** to provide efficient data management and retrieval. The project demonstrates advanced SQL techniques to streamline restaurant operations.
 
 ---
 
-## 🛠️ Technologies Used
+## 📌 **Project Highlights**
+
+- ✅ **Relational Schema**: Includes `Customers`, `Bookings`, `Courses`, and `DeliveryAddress` tables, designed for efficient data organization.
+- 📅 **Booking System**: Date-wise filtering of bookings with customer associations for a seamless reservation experience.
+- 🔁 **Stored Procedure**: `GetBookingsData` to fetch bookings by specific dates, improving query reusability.
+- 🧾 **Virtual Table (View)**: `BookingsView` to display filtered booking data based on specific criteria, ensuring efficient reporting.
+- 🔄 **Dynamic Updates**: Utilized **UPDATE**, **ALTER**, and **subqueries** to perform real-time adjustments to data and structure.
+- 📋 **Advanced SQL Features**: Demonstrates **constraints**, **foreign keys**, **string functions**, and more for maintaining data integrity and advanced querying.
+
+---
+
+## 🛠️ **Technologies Used**
 
 - **Database**: MySQL 8.x
-- **SQL Features**: 
+- **SQL Features**:
   - DDL (Data Definition Language)
   - DML (Data Manipulation Language)
   - Views & Joins
@@ -28,36 +28,36 @@ This project showcases a mini relational database system for a restaurant, built
 
 ---
 
-## 🧱 Schema Overview
+## 🧱 **Schema Overview**
 
-### Tables:
+### **Tables**:
 
-- **Customers**
-  - CustomerID *(PK)*
-  - FullName
-  - PhoneNumber *(Unique)*
+- **Customers**  
+  - `CustomerID` *(PK)*  
+  - `FullName`  
+  - `PhoneNumber` *(Unique)*
 
-- **Bookings**
-  - BookingID
-  - BookingDate
-  - TableNumber
-  - NumberOfGuests
-  - CustomerID *(FK)*
+- **Bookings**  
+  - `BookingID`  
+  - `BookingDate`  
+  - `TableNumber`  
+  - `NumberOfGuests`  
+  - `CustomerID` *(FK)*
 
-- **Courses**
-  - CourseName *(PK)*
-  - Cost
-  - Ingredients *(added later via ALTER)*
+- **Courses**  
+  - `CourseName` *(PK)*  
+  - `Cost`  
+  - `Ingredients` *(added later via ALTER)*
 
-- **DeliveryAddress**
-  - ID *(PK)*
-  - Address
-  - Type *(default = 'Private')*
-  - CustomerID *(FK)*
+- **DeliveryAddress**  
+  - `ID` *(PK)*  
+  - `Address`  
+  - `Type` *(default = 'Private')*  
+  - `CustomerID` *(FK)*
 
 ---
 
-## ⚙️ How to Run
+## ⚙️ **How to Run**
 
 1. Open MySQL Workbench or any MySQL client.
 2. Copy the entire SQL script from this repo into a new query window.
@@ -67,7 +67,7 @@ This project showcases a mini relational database system for a restaurant, built
 
 ---
 
-## 🔍 Key Stored Procedure
+## 🔍 **Key Stored Procedure**
 
 ```sql
 CREATE PROCEDURE GetBookingsData (InputDate DATE)
